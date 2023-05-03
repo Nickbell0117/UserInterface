@@ -210,7 +210,6 @@ GameObject:
   - component: {fileID: 109045388}
   - component: {fileID: 109045389}
   - component: {fileID: 109045390}
-  - component: {fileID: 109045391}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -267,7 +266,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 772ce2be1cb2f9640b3de0821bd3bd73, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -353,19 +352,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &109045391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109045387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2898420c3cf9fb64595cc455ff9258cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  difficulty: 0
 --- !u!1 &135961825
 GameObject:
   m_ObjectHideFlags: 0
@@ -2658,7 +2644,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1541383006}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 109045389}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: RestartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1541383006
 MonoBehaviour:
   m_ObjectHideFlags: 0
