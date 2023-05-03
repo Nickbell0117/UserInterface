@@ -14,6 +14,7 @@ public class Target : MonoBehaviour
     private float xRange = 4;
     private float ySpawnPos = -6;
     private GameManager gameManager;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +42,7 @@ public class Target : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnMouseDown()
@@ -57,7 +58,10 @@ public class Target : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
-        if(!gameObject.CompareTag("Bad")) { gameManager.GameOver(); }
+        if(!gameObject.CompareTag("Bad") && gameManager.isGameActive) 
+        { 
+            gameManager.UpdateLives(-1); 
+        }
     }
     
 
